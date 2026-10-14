@@ -180,6 +180,29 @@
   }
   .gift-ico { width: 44px; height: 44px; margin: 0 auto; color: var(--rose-deep); }
 
+  /* Feuilleton « Ma première année » : épisodes reliés par un fil doré. */
+  .story { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 10px; }
+  .story > .aside { margin: 0 0 6px; }
+  .ep { display: flex; flex-direction: column; align-items: center; gap: 8px; padding-block: 14px; }
+  .ep::before { content: ""; width: 1px; height: 26px; background: var(--gold); opacity: .55; margin-bottom: 6px; }
+  .ep-no { text-transform: uppercase; letter-spacing: .16em; font-size: 11.5px; font-weight: 600; color: #9A7A3E; }
+  .ep h3 { font-family: var(--script); font-weight: 400; font-size: 34px; line-height: 1.1; margin: 0; color: var(--rose-deep); text-wrap: balance; }
+  .ep p { margin: 0; max-width: 34ch; text-wrap: pretty; }
+  .ep-photos { display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 6px; }
+  .ph { width: 78px; height: 78px; padding: 0; border: 0; border-radius: 50%; overflow: hidden; cursor: zoom-in; background: #fff; box-shadow: 0 0 0 3px #fff, 0 0 0 4px var(--line), 0 8px 16px -10px rgba(90,58,46,.6); }
+  .ph img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .ph:focus-visible { outline: 2px solid var(--rose); outline-offset: 4px; }
+  @media (hover: hover) and (prefers-reduced-motion: no-preference) { .ph { transition: transform .2s ease; } .ph:hover { transform: scale(1.06); } }
+
+  .invite > .lightbox { position: fixed; inset: 0; margin: auto; z-index: 20; }
+  .lightbox { border: 0; padding: 12px; border-radius: 18px; background: var(--paper); color: var(--cocoa); max-width: min(92vw, 560px); box-shadow: 0 20px 50px -20px rgba(0,0,0,.5); }
+  .lightbox::backdrop { background: rgba(60,40,32,.55); }
+  .lightbox img { display: block; max-width: 100%; max-height: 72vh; margin: 0 auto; border-radius: 12px; }
+  .lightbox p { margin: 10px 0 8px; text-align: center; font-family: var(--script); font-size: 26px; color: var(--rose-deep); }
+  .lb-nav { display: flex; justify-content: center; gap: 8px; }
+  .lb-nav .pill { font-size: 15px; }
+  #lbPrev, #lbNext { font-size: 20px; padding-inline: 18px; }
+
   /* Panier : une liste légère, séparée par des filets, sans cartes. */
   .gifts { list-style: none; margin: 4px 0; padding: 0; text-align: left; }
   .gifts li { display: grid; grid-template-columns: 44px 1fr; gap: 4px 14px; align-items: center; padding-block: 16px; border-top: 1px solid var(--line); }
@@ -313,6 +336,72 @@
       Itinéraire
     </a>
   </section>
+
+  <div class="sprig" aria-hidden="true"><img src="sprig.jpg" alt="" width="130" height="150"></div>
+
+  <section class="pad story" aria-labelledby="story-title">
+    <h2 id="story-title">Ma première année</h2>
+    <p class="aside">Un petit feuilleton en 8 épisodes. Touche une photo pour l’agrandir.</p>
+
+    <div class="ep">
+      <span class="ep-no">Épisode 1</span>
+      <h3>Il y a un an…</h3>
+      <p>À cette époque l’an dernier, j’étais encore bien au chaud dans le ventre de maman… et je prenais déjà beaucoup de place.</p>
+      <div class="ep-photos" data-n="01 02 03"></div>
+    </div>
+    <div class="ep">
+      <span class="ep-no">Épisode 2</span>
+      <h3>30 octobre 2025&nbsp;: me voilà&nbsp;!</h3>
+      <p>Papa était là pour m’accueillir. Coup de foudre immédiat, pour lui comme pour moi.</p>
+      <div class="ep-photos" data-n="04 05 08"></div>
+    </div>
+    <div class="ep">
+      <span class="ep-no">Épisode 3</span>
+      <h3>Bienvenue dans la famille</h3>
+      <p>Tout le monde voulait me rencontrer et me faire un câlin.</p>
+      <div class="ep-photos" data-n="06 09 10 12"></div>
+    </div>
+    <div class="ep">
+      <span class="ep-no">Épisode 4</span>
+      <h3>Toute petite</h3>
+      <p>Je dormais, je mangeais, je redormais. Le grand luxe.</p>
+      <div class="ep-photos" data-n="07 11"></div>
+    </div>
+    <div class="ep">
+      <span class="ep-no">Épisode 5</span>
+      <h3>Mes premières fêtes</h3>
+      <p>Pour mon premier Noël et mon premier Nouvel An, j’ai sorti ma plus belle tenue.</p>
+      <div class="ep-photos" data-n="13 14"></div>
+    </div>
+    <div class="ep">
+      <span class="ep-no">Épisode 6</span>
+      <h3>Séance photo en famille</h3>
+      <p>Des photos de pro, s’il vous plaît&nbsp;! J’ai pris la pose comme une vraie star.</p>
+      <div class="ep-photos" data-n="15 16 17 18 19 20"></div>
+    </div>
+    <div class="ep">
+      <span class="ep-no">Épisode 7</span>
+      <h3>7, 8, 9 mois&nbsp;: à l’aventure</h3>
+      <p>Les fleurs, les balades, les voyages&nbsp;: je découvre le monde avec papa et maman.</p>
+      <div class="ep-photos" data-n="21 22 23 24"></div>
+    </div>
+    <div class="ep">
+      <span class="ep-no">Épisode 8</span>
+      <h3>Et voilà, 11 mois&nbsp;!</h3>
+      <p>Regardez comme je suis grande&nbsp;! Le prochain épisode, on l’écrit ensemble le 31 octobre.</p>
+      <div class="ep-photos" data-n="25 26"></div>
+    </div>
+  </section>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Photo agrandie">
+    <img id="lbImg" alt="">
+    <p id="lbCap"></p>
+    <div class="lb-nav">
+      <button type="button" class="pill" id="lbPrev" aria-label="Photo précédente">‹</button>
+      <button type="button" class="pill" id="lbClose">Fermer</button>
+      <button type="button" class="pill" id="lbNext" aria-label="Photo suivante">›</button>
+    </div>
+  </dialog>
 
   <div class="balloons" aria-hidden="true">
     <svg class="b1" style="color:#E9BDB4"><use href="#balloon"/></svg>
@@ -521,6 +610,49 @@
   });
   $('replay').addEventListener('click', () => { film.currentTime = 0; play(); });
   $('replayTop').addEventListener('click', () => { showIntro(); film.currentTime = 0; play(); });
+
+  // ---------- Feuilleton : médaillons + agrandissement ----------
+  const shots = [];
+  document.querySelectorAll('.ep').forEach(ep => {
+    const title = ep.querySelector('h3').textContent;
+    const box = ep.querySelector('.ep-photos');
+    box.dataset.n.split(' ').forEach(n => {
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.className = 'ph';
+      b.setAttribute('aria-label', 'Agrandir la photo : ' + title);
+      b.innerHTML = `<img src="story/img/${n}-t.jpg" alt="" width="240" height="240" loading="lazy">`;
+      const idx = shots.push({ src: `story/img/${n}.jpg`, title }) - 1;
+      b.addEventListener('click', () => openShot(idx));
+      box.appendChild(b);
+    });
+  });
+
+  const lb = $('lightbox');
+  let cur = 0;
+  function openShot(i) {
+    cur = (i + shots.length) % shots.length;
+    $('lbImg').src = shots[cur].src;
+    $('lbCap').textContent = shots[cur].title;
+    if (!lb.open) lb.showModal();
+  }
+  $('lbPrev').addEventListener('click', () => openShot(cur - 1));
+  $('lbNext').addEventListener('click', () => openShot(cur + 1));
+  $('lbClose').addEventListener('click', () => lb.close());
+  lb.addEventListener('click', e => { if (e.target === lb) lb.close(); });
+  lb.addEventListener('keydown', e => {
+    if (e.key === 'ArrowLeft') openShot(cur - 1);
+    if (e.key === 'ArrowRight') openShot(cur + 1);
+  });
+  // Glisser du doigt pour passer d'une photo à l'autre.
+  let x0 = null;
+  lb.addEventListener('touchstart', e => { x0 = e.touches[0].clientX; }, { passive: true });
+  lb.addEventListener('touchend', e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0;
+    if (Math.abs(dx) > 40) openShot(cur + (dx < 0 ? 1 : -1));
+    x0 = null;
+  });
 
   // ---------- RSVP via WhatsApp ----------
   const WA = 'https://wa.me/32479390494?text=';
